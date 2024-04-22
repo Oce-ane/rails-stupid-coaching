@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+a {
+  text-decoration: none;
+}
+.bg-y{
+  background-color: rgb(255, 243, 205);
+}

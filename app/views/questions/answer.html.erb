@@ -1,0 +1,41 @@
+<div class="container">
+<h1 class="mb-3 p-3">Stupid Coaching</h1>
+
+<% if params[:answer] == "I am going to work"%>
+<div class="p-2 border-start border-subtle-dark border-4">
+<p><%= params[:answer] %></p>
+<p><em>-You</em></p>
+</div>
+<div class="m-4"></div>
+<div class="bg-y p-2 border-start border-subtle-dark border-4">
+<p>Great!</p>
+<p><em>-Your coach</em></p>
+</div>
+
+<%elsif params[:answer].include?('?') %>
+<div class="mb-2 p-2 border-start border-subtle-dark border-4">
+<p><%= params[:answer] %></p>
+<p><em>-You</em></p>
+</div>
+<div class="m-4"></div>
+<div class="bg-y p-2 border-start border-subtle-dark border-4">
+<p>Silly question, get dressed and get to work!</p>
+<p><em>-Your coach</em></p>
+</div>
+
+<% else %>
+<div class="p-2 border-start border-subtle-dark border-4">
+<p><%= params[:answer] %></p>
+<p><em>-You</em></p>
+</div>
+<div class="m-4"></div>
+<div class="bg-y mb-2 p-2 border-start border-subtle-dark border-4">
+<p>I don't care, get dressed and go to work!</p>
+<p><em>-Your coach</em></p>
+</div>
+
+<% end %>
+<div class="mt-4">
+<%= link_to "Ask another question", ask_path %>
+</div>
+</div>
